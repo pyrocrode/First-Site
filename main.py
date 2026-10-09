@@ -1,15 +1,9 @@
-import random
 from flask import Flask #type: ignore
 
 app = Flask(__name__)
 
 @app.route("/")
-def my_fav_game():
-    game = ["GTA V", "PAYDAY 2", "Terraria", "WorldBox", "Minecraft"]
-    facts = ["Больше всего я наиграл:", "Моя любимая игра:", "Самая дорогая для меня игра:", "Самая недорогая для меня игра:", "Самая крутая музыка:"]
-    
-    result = random.choice(facts) + " " + random.choice(game)
-
-    return result
+def blog():
+   return "Čao! Это мой первый блог. <br>Меня зовут Артем, мне 14(В Январе 2027 мне будет 15), я занимаюсь разработкой на Python с Октября 2025 года(Ну то есть год) <br>Это мой первый раз когда я работаю с библиотекой Flask(А также я самостоятельно изучаю SQL)"
 
 app.run(debug=True)
